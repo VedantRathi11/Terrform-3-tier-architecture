@@ -6,10 +6,11 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('secretkey')
     }
     
+   
     stages {
         stage('checkout') {
             steps {
-                git 'https://github.com/VedantRathi11/Terrform-3-tier-architecture.git'
+                git branch: 'main', url: 'https://github.com/VedantRathi11/Terrform-3-tier-architecture.git'
             }
         }
         stage('init') {
